@@ -1,0 +1,19 @@
+# Input student details
+age = int(input("Enter student's age: "))
+attendance = float(input("Enter attendance percentage (0-100): "))
+
+# Minimum criteria thresholds
+MIN_AGE = 17
+MIN_ATTENDANCE = 75.0
+
+# Check eligibility using the 'and' operator
+if age >= MIN_AGE and attendance >= MIN_ATTENDANCE:
+    print("Eligibility Status: ELIGIBLE to write the exam.")
+else:
+    print("Eligibility Status: NOT ELIGIBLE.")
+    
+    # Provide helpful feedback on what rule was broken
+    if age < MIN_AGE:
+        print(f" - Must be at least {MIN_AGE} years old (Current: {age}).")
+    if attendance < MIN_ATTENDANCE:
+        print(f" - Attendance must be at least {MIN_ATTENDANCE}% (Current: {attendance}%).")
